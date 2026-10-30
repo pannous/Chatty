@@ -9,10 +9,14 @@ VOICE = "marin"
 SAMPLE_RATE = 24_000
 CHUNK_SECONDS = 0.1
 REPO = pathlib.Path(__file__).resolve().parent.parent
-QUESTION_M4A = REPO / "probes/audio/question.m4a"
-QUESTION_WAV = REPO / "probes/audio/question-24k.wav"
+QUESTION_M4A = REPO / "build/audio/question.m4a"
+QUESTION_WAV = REPO / "build/audio/question-24k.wav"
 
 key = next(l.split("=", 1)[1].strip().strip('"') for l in open(REPO / ".env") if "OPENAI_API_KEY=" in l)
+QUESTION_M4A.parent.mkdir(parents=True, exist_ok=True)
+if not QUESTION_M4A.exists():
+    subprocess.run(["say", "-o", QUESTION_M4A, "--file-format=m4af", "--data-format=aac",
+                    "What is the tallest mountain in Europe? Answer in one sentence."], check=True)
 subprocess.run(["afconvert", "-f", "WAVE", "-d", f"LEI16@{SAMPLE_RATE}", "-c", "1", QUESTION_M4A, QUESTION_WAV], check=True)
 pcm = wave.open(str(QUESTION_WAV)).readframes(10**9) + bytes(SAMPLE_RATE * 2)  # 1 s trailing silence for VAD
 
