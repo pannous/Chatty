@@ -1,3 +1,6 @@
 Generated/
 xcuserdata/
 .DS_Store
+Secrets/
+.env
+build/
