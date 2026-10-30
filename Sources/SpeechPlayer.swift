@@ -6,7 +6,6 @@ import AVFoundation
 /// and a drain wait gives up once the queued audio should long have finished.
 @MainActor final class SpeechPlayer {
     private static let drainGraceSeconds = 2.0
-    private static let trailingSilenceSeconds = 3.0
     private static let prebufferSeconds = 1.0
     /// Volume 0…1 maps linearly onto this gain range; beyond 0 dB it boosts above the system volume (clipping loud peaks).
     private static let gainRangeDecibels: ClosedRange<Float> = -24...12
@@ -78,10 +77,10 @@ import AVFoundation
         player.play()
     }
 
-    /// The output cuts off the last moments of audio when playback stops, so answers end with silence.
-    func enqueueTrailingSilence() {
-        answerIsComplete = true
-        enqueue(pcm16: Data(count: Int(Self.trailingSilenceSeconds * format.sampleRate) * MemoryLayout<Int16>.size))
+    /// Nothing more comes for this answer: play out what is queued even if it is less than the prebuffer.
+    func finishAnswer() {
+        answerIsComplete = queuedBuffers > 0
+        playIfBuffered()
     }
 
     func waitUntilDrained() async {

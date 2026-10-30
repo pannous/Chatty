@@ -112,7 +112,7 @@ import os
             await routeAnswerToHeadphones()
             try player.start()
             try await streamAndSpeakReply(client)
-            player.enqueueTrailingSilence()
+            player.finishAnswer()
             await player.waitUntilDrained()
             try restoreRecordingRoute()
             return true
@@ -212,7 +212,7 @@ import os
                         player.enqueue(pcm16: pcm)
                     case .replyDone:
                         trace("Chatty: reply: \(self.reply)")
-                        player.enqueueTrailingSilence()
+                        player.finishAnswer()
                         await player.waitUntilDrained()
                         if try restoreRecordingRoute() { try session.restartMicrophone() }
                         listen()
