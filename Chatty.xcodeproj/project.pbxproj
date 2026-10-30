@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21D0259F5F2BBEE0352CDD04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1227DE7F621E792F45919986 /* Assets.xcassets */; };
+		2E0C9CB33E359D6160676EFF /* VoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6121145AD77853FBE11279B /* VoiceRecorder.swift */; };
+		64E018404A1E5E3C6AEF2CAB /* SentenceSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664F5052B9BB6B9F9C5C853 /* SentenceSplitter.swift */; };
+		92187B33161FE832A6CD1C60 /* ChattyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABEC6257A746734B8995F78 /* ChattyApp.swift */; };
+		9A1FE1EF02F8C3C539698ACE /* OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF4FC458C0C736D7B4F74A3 /* OpenAIClient.swift */; };
+		B4C26D4488DA6C72B51C66E1 /* WakeKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D61A860EB6EC7A527C2798 /* WakeKeeper.swift */; };
+		BBA5BC86124BD923C8715280 /* CrownPressInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FC8B23D542529D6E6F93A7 /* CrownPressInterceptor.m */; };
+		D8BBEBE4F3FAB407FF600FD0 /* RealtimeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C195A96B4F000668FF869F9 /* RealtimeSession.swift */; };
+		DC2A3DF51F244CBC0969C3F4 /* TalkIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E027A2FD0C4568C1AEE07 /* TalkIntent.swift */; };
+		DC4F2FD5CC4DB6B3853F7003 /* Assistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDF4B20368711D01432471 /* Assistant.swift */; };
+		EAA028768B33A22FDB9E5398 /* Trace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED575DB51459620461F08D8 /* Trace.swift */; };
+		F258A1BEE61E652E522A279B /* SpeechPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D8B603008B8A43B731F44 /* SpeechPlayer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1227DE7F621E792F45919986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14FC8B23D542529D6E6F93A7 /* CrownPressInterceptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrownPressInterceptor.m; sourceTree = "<group>"; };
+		2664F5052B9BB6B9F9C5C853 /* SentenceSplitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceSplitter.swift; sourceTree = "<group>"; };
+		4ABEC6257A746734B8995F78 /* ChattyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattyApp.swift; sourceTree = "<group>"; };
+		5AD305682E33805AC996486E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		653D8B603008B8A43B731F44 /* SpeechPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPlayer.swift; sourceTree = "<group>"; };
+		6C195A96B4F000668FF869F9 /* RealtimeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeSession.swift; sourceTree = "<group>"; };
+		7ED575DB51459620461F08D8 /* Trace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trace.swift; sourceTree = "<group>"; };
+		8EF4FC458C0C736D7B4F74A3 /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClient.swift; sourceTree = "<group>"; };
+		A1D61A860EB6EC7A527C2798 /* WakeKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeKeeper.swift; sourceTree = "<group>"; };
+		B0BDF4B20368711D01432471 /* Assistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assistant.swift; sourceTree = "<group>"; };
+		C19C0F8A050393785D588696 /* CrownPressInterceptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrownPressInterceptor.h; sourceTree = "<group>"; };
+		C27BD53C70320A14C4D9E240 /* Chatty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6121145AD77853FBE11279B /* VoiceRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecorder.swift; sourceTree = "<group>"; };
+		E78E027A2FD0C4568C1AEE07 /* TalkIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkIntent.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		114529E96FD1ACE34CDD599E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C27BD53C70320A14C4D9E240 /* Chatty.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B38CA4EA39B76CD7E2CEB22 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B0BDF4B20368711D01432471 /* Assistant.swift */,
+				4ABEC6257A746734B8995F78 /* ChattyApp.swift */,
+				C19C0F8A050393785D588696 /* CrownPressInterceptor.h */,
+				14FC8B23D542529D6E6F93A7 /* CrownPressInterceptor.m */,
+				8EF4FC458C0C736D7B4F74A3 /* OpenAIClient.swift */,
+				6C195A96B4F000668FF869F9 /* RealtimeSession.swift */,
+				2664F5052B9BB6B9F9C5C853 /* SentenceSplitter.swift */,
+				653D8B603008B8A43B731F44 /* SpeechPlayer.swift */,
+				E78E027A2FD0C4568C1AEE07 /* TalkIntent.swift */,
+				7ED575DB51459620461F08D8 /* Trace.swift */,
+				D6121145AD77853FBE11279B /* VoiceRecorder.swift */,
+				A1D61A860EB6EC7A527C2798 /* WakeKeeper.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		479505C303CFF61EA0F33653 = {
+			isa = PBXGroup;
+			children = (
+				1227DE7F621E792F45919986 /* Assets.xcassets */,
+				A3C6A8BB35E177F0A3BFF4E0 /* Chatty */,
+				3B38CA4EA39B76CD7E2CEB22 /* Sources */,
+				114529E96FD1ACE34CDD599E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3C6A8BB35E177F0A3BFF4E0 /* Chatty */ = {
+			isa = PBXGroup;
+			children = (
+				5AD305682E33805AC996486E /* Config.xcconfig */,
+			);
+			name = Chatty;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		092914718FE32F20463BAB47 /* Chatty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FA36EA0F3B3F3E8137D0DB0 /* Build configuration list for PBXNativeTarget "Chatty" */;
+			buildPhases = (
+				598C3235A3833DDFD7BA5DCC /* Sources */,
+				C1FB4C3159EB8F75D2B8C0B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chatty;
+			packageProductDependencies = (
+			);
+			productName = Chatty;
+			productReference = C27BD53C70320A14C4D9E240 /* Chatty.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB23B51E6E20E48E50C63D8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					092914718FE32F20463BAB47 = {
+						DevelopmentTeam = B325LM52BE;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E56C8EF6298D3CC29E81DCAA /* Build configuration list for PBXProject "Chatty" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 479505C303CFF61EA0F33653;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 114529E96FD1ACE34CDD599E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				092914718FE32F20463BAB47 /* Chatty */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1FB4C3159EB8F75D2B8C0B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21D0259F5F2BBEE0352CDD04 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		598C3235A3833DDFD7BA5DCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4F2FD5CC4DB6B3853F7003 /* Assistant.swift in Sources */,
+				92187B33161FE832A6CD1C60 /* ChattyApp.swift in Sources */,
+				BBA5BC86124BD923C8715280 /* CrownPressInterceptor.m in Sources */,
+				9A1FE1EF02F8C3C539698ACE /* OpenAIClient.swift in Sources */,
+				D8BBEBE4F3FAB407FF600FD0 /* RealtimeSession.swift in Sources */,
+				64E018404A1E5E3C6AEF2CAB /* SentenceSplitter.swift in Sources */,
+				F258A1BEE61E652E522A279B /* SpeechPlayer.swift in Sources */,
+				DC2A3DF51F244CBC0969C3F4 /* TalkIntent.swift in Sources */,
+				EAA028768B33A22FDB9E5398 /* Trace.swift in Sources */,
+				2E0C9CB33E359D6160676EFF /* VoiceRecorder.swift in Sources */,
+				B4C26D4488DA6C72B51C66E1 /* WakeKeeper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		889C923F2CF085D99AA65E47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AD305682E33805AC996486E /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		A8A2ED07D4BD5D6788C24256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B325LM52BE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Generated/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Chatty;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Chatty listens to your question when you double-press the Digital Crown.";
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pannous.chatty;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/CrownPressInterceptor.h;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		B584AE8844CDD87BB8587FC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B325LM52BE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Generated/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Chatty;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Chatty listens to your question when you double-press the Digital Crown.";
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pannous.chatty;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/CrownPressInterceptor.h;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		E87903DF1C63135E9D2EBCCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AD305682E33805AC996486E /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FA36EA0F3B3F3E8137D0DB0 /* Build configuration list for PBXNativeTarget "Chatty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B584AE8844CDD87BB8587FC7 /* Debug */,
+				A8A2ED07D4BD5D6788C24256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E56C8EF6298D3CC29E81DCAA /* Build configuration list for PBXProject "Chatty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				889C923F2CF085D99AA65E47 /* Debug */,
+				E87903DF1C63135E9D2EBCCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB23B51E6E20E48E50C63D8A /* Project object */;
+}

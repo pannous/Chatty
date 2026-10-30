@@ -1,0 +1,31 @@
+name: Chatty
+options:
+  bundleIdPrefix: com.pannous
+  deploymentTarget:
+    watchOS: "11.0"
+configFiles:
+  Debug: Config.xcconfig
+  Release: Config.xcconfig
+targets:
+  Chatty:
+    type: application
+    platform: watchOS
+    sources: [Sources, Assets.xcassets]
+    info:
+      path: Generated/Info.plist
+      properties:
+        OpenAIAPIKey: $(OPENAI_API_KEY)
+        WKBackgroundModes: [mindfulness] # extended runtime while talking; also enables "Return to App"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.pannous.chatty
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Chatty
+        INFOPLIST_KEY_WKApplication: YES
+        INFOPLIST_KEY_WKWatchOnly: YES
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: Chatty listens to your question when you double-press the Digital Crown.
+        SWIFT_OBJC_BRIDGING_HEADER: Sources/CrownPressInterceptor.h
+        SWIFT_VERSION: "6.0"
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: B325LM52BE # Pannous GmbH; lives here so regenerating the project keeps it in Xcode
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon

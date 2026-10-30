@@ -1,0 +1,2 @@
+// Optional: written from .env by tools/build-chatty.sh; without it the app reports the missing key.
+#include? "../Secrets/Secrets.xcconfig"
