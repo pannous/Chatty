@@ -1,4 +1,5 @@
 import SwiftUI
+import WatchKit
 
 @main
 struct ChattyApp: App {
@@ -25,6 +26,25 @@ private struct StateBorder: View {
     }
 }
 
+private let copyPressSeconds = 1.0
+private let volumeBarDuration = Duration.seconds(1.5)
+
+/// Fills from the bottom as the volume rises, like a level meter.
+private struct VolumeBar: View {
+    let volume: Double
+
+    var body: some View {
+        GeometryReader { geometry in
+            Capsule().fill(.gray.opacity(0.4))
+                .overlay(alignment: .bottom) {
+                    Capsule().fill(.white).frame(height: geometry.size.height * volume)
+                }
+        }
+        .frame(width: 4, height: 60)
+        .padding(.trailing, 2)
+    }
+}
+
 extension Assistant.Phase {
     /// Green while the microphone is open, yellow until the reply starts, orange while it streams in, blue while it is spoken.
     var color: Color? {
@@ -48,6 +68,24 @@ struct ContentView: View {
         ? UserDefaults.standard.bool(forKey: "autostart")
         : UserDefaults.standard.string(forKey: "audioFile") == nil
 
+    @State private var showsVolume = false
+    @State private var hideVolume: Task<Void, Never>?
+
+    private func flashVolume() {
+        withAnimation { showsVolume = true }
+        hideVolume?.cancel()
+        hideVolume = Task {
+            try? await Task.sleep(for: volumeBarDuration)
+            if !Task.isCancelled { withAnimation { showsVolume = false } }
+        }
+    }
+
+    private func copyReply() {
+        let copied = !assistant.reply.isEmpty && Clipboard.copy(assistant.reply)
+        trace("Chatty: reply copied to the clipboard: \(copied)")
+        WKInterfaceDevice.current().play(copied ? .success : .failure)
+    }
+
     var body: some View {
         // swipe scrolls; the Crown rotation sets the volume (the modifier below takes it from the ScrollView);
         // the view follows the newest line while an answer streams in
@@ -64,13 +102,20 @@ struct ContentView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .contentShape(Rectangle())
         .onTapGesture { assistant.toggleListening() } // a tap anywhere: listening pauses, otherwise it listens
+        .onLongPressGesture(minimumDuration: copyPressSeconds) { copyReply() }
         .background {
             if let color = assistant.phase.color { StateBorder(color: color, pixel: 1 / displayScale) }
+        }
+        .overlay(alignment: .trailing) {
+            if showsVolume { VolumeBar(volume: volume).transition(.opacity) }
         }
         .animation(.easeInOut, value: assistant.phase)
         .focusable()
         .digitalCrownRotation($volume, from: 0, through: 1, by: 0.05, sensitivity: .medium, isContinuous: false, isHapticFeedbackEnabled: true)
+        // the system's Crown indicator shows a scroll position and moves down when the volume goes up
+        .digitalCrownAccessory(.hidden)
         .onChange(of: volume, initial: true) { assistant.setVolume(volume) }
+        .onChange(of: volume) { flashVolume() }
         .onChange(of: scenePhase, initial: true) { _, phase in
             assistant.isOnScreen = phase == .active
             switch phase {
