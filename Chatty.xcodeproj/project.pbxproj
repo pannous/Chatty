@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02DE509FB42D5CB4C4B4BEE4 /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E12BE95F5C5B177556832D /* Clipboard.swift */; };
 		21D0259F5F2BBEE0352CDD04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1227DE7F621E792F45919986 /* Assets.xcassets */; };
 		2E0C9CB33E359D6160676EFF /* VoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6121145AD77853FBE11279B /* VoiceRecorder.swift */; };
 		64E018404A1E5E3C6AEF2CAB /* SentenceSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664F5052B9BB6B9F9C5C853 /* SentenceSplitter.swift */; };
@@ -33,6 +34,7 @@
 		8EF4FC458C0C736D7B4F74A3 /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClient.swift; sourceTree = "<group>"; };
 		A1D61A860EB6EC7A527C2798 /* WakeKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeKeeper.swift; sourceTree = "<group>"; };
 		B0BDF4B20368711D01432471 /* Assistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assistant.swift; sourceTree = "<group>"; };
+		C0E12BE95F5C5B177556832D /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
 		C19C0F8A050393785D588696 /* CrownPressInterceptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrownPressInterceptor.h; sourceTree = "<group>"; };
 		C27BD53C70320A14C4D9E240 /* Chatty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6121145AD77853FBE11279B /* VoiceRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecorder.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				B0BDF4B20368711D01432471 /* Assistant.swift */,
 				4ABEC6257A746734B8995F78 /* ChattyApp.swift */,
+				C0E12BE95F5C5B177556832D /* Clipboard.swift */,
 				C19C0F8A050393785D588696 /* CrownPressInterceptor.h */,
 				14FC8B23D542529D6E6F93A7 /* CrownPressInterceptor.m */,
 				8EF4FC458C0C736D7B4F74A3 /* OpenAIClient.swift */,
@@ -159,6 +162,7 @@
 			files = (
 				DC4F2FD5CC4DB6B3853F7003 /* Assistant.swift in Sources */,
 				92187B33161FE832A6CD1C60 /* ChattyApp.swift in Sources */,
+				02DE509FB42D5CB4C4B4BEE4 /* Clipboard.swift in Sources */,
 				BBA5BC86124BD923C8715280 /* CrownPressInterceptor.m in Sources */,
 				9A1FE1EF02F8C3C539698ACE /* OpenAIClient.swift in Sources */,
 				D8BBEBE4F3FAB407FF600FD0 /* RealtimeSession.swift in Sources */,
