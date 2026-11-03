@@ -42,11 +42,6 @@ import AVFoundation
         playIfBuffered()
     }
 
-    func restart() throws {
-        engine.stop()
-        try start()
-    }
-
     func enqueue(pcm16 data: Data) {
         if !engine.isRunning {
             do { try start() } catch { trace("Chatty: player could not start: \(error.localizedDescription)") }

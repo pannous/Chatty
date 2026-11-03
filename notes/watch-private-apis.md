@@ -109,3 +109,6 @@ hold crown and say "Claude".
 - Xcode console confirms: the Realtime WebSocket is "Path was denied by NECP policy" (TN3135), not a network outage.
 - After `setCategory(.playback, policy: .longFormAudio)` a plain `setCategory(.playAndRecord, mode:options:)` fails
   with -50: the long-form policy sticks; pass `policy: .default` explicitly.
+- 2026-11-03: main dropped both the Realtime path (WebSocket blocked by NECP on device anyway) and the long-form
+  "podcast" route for answers; AirPods still get the answers through `.allowBluetoothHFP` (HFP quality).
+  The Realtime/relay experiment lives on branch `me`.

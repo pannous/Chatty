@@ -15,7 +15,6 @@
 		9A1FE1EF02F8C3C539698ACE /* OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF4FC458C0C736D7B4F74A3 /* OpenAIClient.swift */; };
 		B4C26D4488DA6C72B51C66E1 /* WakeKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D61A860EB6EC7A527C2798 /* WakeKeeper.swift */; };
 		BBA5BC86124BD923C8715280 /* CrownPressInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FC8B23D542529D6E6F93A7 /* CrownPressInterceptor.m */; };
-		D8BBEBE4F3FAB407FF600FD0 /* RealtimeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C195A96B4F000668FF869F9 /* RealtimeSession.swift */; };
 		DC2A3DF51F244CBC0969C3F4 /* TalkIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E027A2FD0C4568C1AEE07 /* TalkIntent.swift */; };
 		DC4F2FD5CC4DB6B3853F7003 /* Assistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDF4B20368711D01432471 /* Assistant.swift */; };
 		EAA028768B33A22FDB9E5398 /* Trace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED575DB51459620461F08D8 /* Trace.swift */; };
@@ -29,7 +28,6 @@
 		4ABEC6257A746734B8995F78 /* ChattyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattyApp.swift; sourceTree = "<group>"; };
 		5AD305682E33805AC996486E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		653D8B603008B8A43B731F44 /* SpeechPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPlayer.swift; sourceTree = "<group>"; };
-		6C195A96B4F000668FF869F9 /* RealtimeSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeSession.swift; sourceTree = "<group>"; };
 		7ED575DB51459620461F08D8 /* Trace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trace.swift; sourceTree = "<group>"; };
 		8EF4FC458C0C736D7B4F74A3 /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClient.swift; sourceTree = "<group>"; };
 		A1D61A860EB6EC7A527C2798 /* WakeKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeKeeper.swift; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 				C19C0F8A050393785D588696 /* CrownPressInterceptor.h */,
 				14FC8B23D542529D6E6F93A7 /* CrownPressInterceptor.m */,
 				8EF4FC458C0C736D7B4F74A3 /* OpenAIClient.swift */,
-				6C195A96B4F000668FF869F9 /* RealtimeSession.swift */,
 				2664F5052B9BB6B9F9C5C853 /* SentenceSplitter.swift */,
 				653D8B603008B8A43B731F44 /* SpeechPlayer.swift */,
 				E78E027A2FD0C4568C1AEE07 /* TalkIntent.swift */,
@@ -165,7 +162,6 @@
 				02DE509FB42D5CB4C4B4BEE4 /* Clipboard.swift in Sources */,
 				BBA5BC86124BD923C8715280 /* CrownPressInterceptor.m in Sources */,
 				9A1FE1EF02F8C3C539698ACE /* OpenAIClient.swift in Sources */,
-				D8BBEBE4F3FAB407FF600FD0 /* RealtimeSession.swift in Sources */,
 				64E018404A1E5E3C6AEF2CAB /* SentenceSplitter.swift in Sources */,
 				F258A1BEE61E652E522A279B /* SpeechPlayer.swift in Sources */,
 				DC2A3DF51F244CBC0969C3F4 /* TalkIntent.swift in Sources */,
